@@ -1,6 +1,6 @@
 import random
 class BoardGame:
-    def __init__(self,num_players=12):
+    def __init__(self,num_players):
         self.num_players=num_players
         self.players={f"Player{i}":1000 for i in range(1,num_players+1)}
         self.bank_balance=5000
@@ -59,7 +59,7 @@ class BoardGame:
 if __name__ == "__main__":
     cells="JHLHELHLHJ"
     dice_output=[2,2,1,4,4,2,4,4,2,2]
-    game=BoardGame(num_players=3)
+    game=BoardGame(3)
     game.play(cells,dice_output)
     game.print_player_balances()
     game.print_bank_balance()
